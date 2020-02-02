@@ -9,8 +9,10 @@ import Data.ByteString (ByteString)
 import Data.Byteable (toBytes)
 import qualified Data.ByteString.Char8 as C8
 import qualified Data.ByteString.Base16 as B16
+import Data.Char(isSpace)
 
 import qualified Data.Map.Strict as M
+import Data.Maybe(isNothing)
 import Data.Text as T
 import qualified Data.Text.IO as TextIO
 import Data.Text.Encoding as E
@@ -92,24 +94,35 @@ renderDot mfmt rndr src dst =
 
 graphviz :: Maybe Format -> Block -> IO Block
 graphviz mfmt cblock@(CodeBlock (id, classes, attrs) content) =
-  if "dot" `elem` classes then do
-    ensureFile dest >> TextIO.writeFile dest content
-    img <- renderDot1 mfmt mrndr dest
-    ensureFile img
-    return $ Para [Image (id,classes,attrs) [] (T.pack img, caption)]
-  else return cblock
+    if "dot" `elem` classes then do
+      ensureFile dest
+      TextIO.writeFile dest content
+      img <- renderDot1 mfmt mrndr dest
+      ensureFile img
+      return $ Para [Image (id,classes,attrs) [] (T.pack img, caption)]
+    else return cblock
   where
+    dotContent = if isEmptyText content
+                    then emptyDiagram
+                    else content
     dest = fileName4Code "graphviz" content (Just "dot")
     ensureFile fp =
-      let dir = takeDirectory fp in
-      createDirectoryIfMissing True dir >> doesFileExist fp >>=
-        \exist ->
-          unless exist $ writeFile fp ""
-    toTextPairs = Prelude.map (\(f,s) -> (T.pack f,T.pack s))
+      let dir = takeDirectory fp
+      in do
+        createDirectoryIfMissing True dir
+        exist <- doesFileExist fp
+        unless exist $ TextIO.writeFile fp emptyDiagram
+    --toTextPairs = Prelude.map (\(f,s) -> (T.pack f,T.pack s))
     m = M.fromList $ attrs
     mrndr = case M.lookup "renderer" m of
       Just str -> rendererFromString str
       _ -> Nothing
     (caption, typedef) = getCaption m
 graphviz fmt x = return x
+
+isEmptyText :: Text -> Bool
+isEmptyText = isNothing . T.find (not . isSpace)
+
+emptyDiagram :: Text
+emptyDiagram = "digraph EmptyDiagram { node [shape=\"plain\"]; \"Diagram is empty\"; }"
 
