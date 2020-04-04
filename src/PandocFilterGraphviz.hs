@@ -94,7 +94,7 @@ renderDot mfmt rndr src dst =
 
 graphviz :: Maybe Format -> Block -> IO Block
 graphviz mfmt cblock@(CodeBlock (id, classes, attrs) content) =
-    if "dot" `elem` classes then do
+    if isDot id || Prelude.any isDot classes then do
       ensureFile dest
       TextIO.writeFile dest content
       img <- renderDot1 mfmt mrndr dest
@@ -105,6 +105,7 @@ graphviz mfmt cblock@(CodeBlock (id, classes, attrs) content) =
     dotContent = if isEmptyText content
                     then emptyDiagram
                     else content
+    isDot = ("dot"==) . T.toLower
     dest = fileName4Code "graphviz" content (Just "dot")
     ensureFile fp =
       let dir = takeDirectory fp
