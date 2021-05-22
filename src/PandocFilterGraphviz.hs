@@ -25,6 +25,8 @@ import System.Process (system)
 import Text.Pandoc
 import Text.Pandoc.JSON
 
+--import qualified Debug.Trace as Trace
+
 data Renderer = Dot | Neato | Twopi | Circo | FDP | SFDP | Patchwork
 instance Show Renderer where
   show Dot = "dot"

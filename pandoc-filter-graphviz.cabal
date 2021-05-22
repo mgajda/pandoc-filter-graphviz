@@ -23,7 +23,7 @@ executable pandoc-filter-graphviz
   -- other-extensions:    
   build-depends:       base > 4.5 && < 5
     , bytestring
-    , pandoc == 2.9.*
+    , pandoc
     , text
     , base16-bytestring
     , cryptonite
@@ -31,7 +31,9 @@ executable pandoc-filter-graphviz
     , containers
     , directory
     , process
-    , pandoc-types == 1.20.*
+    , pandoc-types == 1.22.*
     , filepath
   hs-source-dirs:      src
   default-language:    Haskell2010
+  default-extensions:  OverloadedStrings
+  

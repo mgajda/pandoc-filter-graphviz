@@ -5,113 +5,15 @@
 
 packages:
 - completed:
-    hackage: pandoc-2.9.1.1@sha256:1dc5df8c32e1058fec2a2f3638efe0f41f81ab86b760b77eafbb4b09ccf312ee,35645
+    hackage: pandoc-types-1.22@sha256:15512ce011555ee720820f11cac0598317293406da5812337cbb1550d144e3bd,4071
     pantry-tree:
-      size: 86314
-      sha256: 262fa868d8a589e1850ea46d994ca7d77d75dc723f8ae394bcdb4d9279820104
+      size: 737
+      sha256: 28e43150f4bb0d4d880cf92ade20fefcd8705ee95cfe4a1d0bb5efd320982a9d
   original:
-    hackage: pandoc-2.9.1.1
-- completed:
-    hackage: pandoc-types-1.20@sha256:8393b1a73b8a6a1f3feaeb3a6592c176461082c3e4d897f1b316b1a58dd84c39,3999
-    pantry-tree:
-      size: 855
-      sha256: cdaa66d381a21406434e7a733c9b9291a3bc44b623e7a9f97ef335283770f3fa
-  original:
-    hackage: pandoc-types-1.20
-- completed:
-    hackage: texmath-0.12@sha256:148a7cf41aaba411a3a7b8e6995bcf7a29fc499af64b2320eb573fbd1c15d209,6565
-    pantry-tree:
-      size: 273835
-      sha256: b2d6e699481f7b7aa784ca357b9dc28d0724bed46ab6a64a37250467341cd69f
-  original:
-    hackage: texmath-0.12
-- completed:
-    hackage: haddock-library-1.8.0@sha256:293544a80c3d817a021fec69c430e808914a9d86db0c6bd6e96a386607a66627,3850
-    pantry-tree:
-      size: 3397
-      sha256: 2fb23fd09565829807a0368011cd57ea13e9a79fa4c65a47810aaf9a528427c2
-  original:
-    hackage: haddock-library-1.8.0
-- completed:
-    hackage: skylighting-0.8.3.2@sha256:8b8573cd8820129a4c00675f52606f0f4c04c65d2e631e9e0e3d793cefdb534c,9730
-    pantry-tree:
-      size: 10380
-      sha256: cfe063d17444f6e12a8884cab7b2ec76afba9925be04155af605931793eac1f3
-  original:
-    hackage: skylighting-0.8.3.2
-- completed:
-    hackage: skylighting-core-0.8.3.2@sha256:1f7cb6c8bb9299a83c50ae1f4b00d3808e27e4401807c530c8c3df956ad26d23,8058
-    pantry-tree:
-      size: 13279
-      sha256: 1cc0d70bd3f066bf8382206721a1e3854b78fbd067ece3d76ddbfc1c4e73fd2b
-  original:
-    hackage: skylighting-core-0.8.3.2
-- completed:
-    hackage: regex-pcre-builtin-0.95.0.8.8.35@sha256:7488751d031bea9bc996c376c8086846a22010c764d8cc120df8b14ce7af9dbb,4550
-    pantry-tree:
-      size: 2370
-      sha256: 0ade97e9b1480da21b3de663b23394558ed0838103ea509e7d22b134e6745190
-  original:
-    hackage: regex-pcre-builtin-0.95.0.8.8.35
-- completed:
-    hackage: doclayout-0.2.0.1@sha256:0410e40c4fa8e299b4f5fa03d378111b9d0effdf59134c95882a160637887ba8,2063
-    pantry-tree:
-      size: 424
-      sha256: d43cc75d1a016cb5c5029ec1e00306192631a344f1453c2c0f25e9370452a8b4
-  original:
-    hackage: doclayout-0.2.0.1@sha256:0410e40c4fa8e299b4f5fa03d378111b9d0effdf59134c95882a160637887ba8,2063
-- completed:
-    hackage: emojis-0.1@sha256:3cd86b552ad71c118a7822128c97054b6cf22bc4ff5b8f7e3eb0b356202aeecd,1907
-    pantry-tree:
-      size: 426
-      sha256: 0af0e5f0ba2af10a2eda8b96b41ff77d2229d90682c1220723a13b9582c4a41b
-  original:
-    hackage: emojis-0.1
-- completed:
-    hackage: jira-wiki-markup-1.0.0@sha256:24484791e650c80c452348e2523decc9a410aa965f79c0734c1e257f93b25cd1,3576
-    pantry-tree:
-      size: 1178
-      sha256: 60c39181a59a497be6c754e1cbf03461d9c4950bd4c523ca1efe1bd11e6f6b4f
-  original:
-    hackage: jira-wiki-markup-1.0.0
-- completed:
-    hackage: HsYAML-0.2.0.0@sha256:4e554ee481650156a26a71b40f233979cd943f22ee887b70dae3b8b24de2932f,5273
-    pantry-tree:
-      size: 1279
-      sha256: ae72511c2322bffdea7ed0d29b689d9e1b61ad55b251adb2aff743d5d7259e07
-  original:
-    hackage: HsYAML-0.2.0.0
-- completed:
-    hackage: HsYAML-aeson-0.2.0.0@sha256:04796abfc01cffded83f37a10e6edba4f0c0a15d45bef44fc5bb4313d9c87757,1791
-    pantry-tree:
-      size: 234
-      sha256: 67cc9ba17c79e71d3abdb465a3ee2825477856fff3b8b7d543cbbbefdae9a9d9
-  original:
-    hackage: HsYAML-aeson-0.2.0.0
-- completed:
-    hackage: doctemplates-0.8.1@sha256:be34c3210d9ebbba1c10100e30d8c3ba3b6c34653ec2ed15f09e5d05055aa37d,3111
-    pantry-tree:
-      size: 2303
-      sha256: 9d4d8e7a85166ffd951b02f87be540607b55084c04730932346072329adf4913
-  original:
-    hackage: doctemplates-0.8.1
-- completed:
-    hackage: pandoc-citeproc-0.16.4.1@sha256:4700f5bda420d343ce1262fb5c4b244d785b98d6277698fb1d10a713001a8e17,8721
-    pantry-tree:
-      size: 25492
-      sha256: 539b6ded39de91744b7cbba9757c33868299ce96713e154ccaa2a1d2a144d90b
-  original:
-    hackage: pandoc-citeproc-0.16.4.1
-- completed:
-    hackage: roman-numerals-0.5.1.5@sha256:819d04d9d442b24629dd058f6f0b02bd78e9f9ae99538bc44ca448f1cb2b7b01,1208
-    pantry-tree:
-      size: 220
-      sha256: 2154c0f4a11842593586dc1932e233cd8c802994763f7d3ce3e5916be8bc7ee5
-  original:
-    hackage: roman-numerals-0.5.1.5@sha256:819d04d9d442b24629dd058f6f0b02bd78e9f9ae99538bc44ca448f1cb2b7b01,1208
+    hackage: pandoc-types-1.22
 snapshots:
 - completed:
-    size: 524127
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/14/6.yaml
-    sha256: dc70dfb45e2c32f54719819bd055f46855dd4b3bd2e58b9f3f38729a2d553fbb
-  original: lts-14.6
+    size: 567037
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/9.yaml
+    sha256: d7d8d5106e53d1669964bd8bd2b0f88a5ad192d772f5376384b76738fd992311
+  original: lts-17.9
